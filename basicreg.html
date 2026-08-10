@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+        input {
+            width: 250px;
+            padding: 6px;
+            margin-top: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<h2>Registration Form</h2>
+<form>
+    Name:<br>
+    <input type="text" maxlength="15" pattern="[A-Za-z ]+" required>
+    <br><br>
+    Email:<br>
+    <input type="email" pattern=".+@.+\..+" required>
+    <br><br>
+    Phone Number:<br>
+    <input type="tel" pattern="[0-9]{10}" required>
+    <br><br>
+    Customer ID:<br>
+    <input type="text" pattern="[A-Za-z0-9]+" required>
+    <br><br>
+    Address:<br>
+    <input type="text" maxlength="100" pattern="[A-Za-z0-9 ]+" required>
+    <br><br>
+    Pincode:<br>
+    <input type="text" pattern="[0-9]{6}" required>
+    <br><br>
+    Password:<br>
+    <input type="password" 
+    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{6,12}" 
+    required>
+    <br><br>
+    <button type="submit">Register</button>
+</form>
+
+</body>
+</html>
