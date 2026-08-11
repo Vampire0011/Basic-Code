@@ -1,0 +1,87 @@
+<html>
+<body style="background: linear-gradient(135deg, #74ebd5, #ACB6E5); font-size: 18px;">
+
+<center><h3 style="font-size: 26px;"> Customer Registration Form <h3></center>
+
+<form action="custdata.php" method="POST">
+<table align="center" border="0">
+<tr>
+<td><label> Customer Name </label></td>
+<td><input type="text" name="name"></td>
+</tr><tr>
+<td><label> Password </label></td>
+<td><input type="password" name="pos"></td>
+</tr><tr>
+<td><label> Email </label></td>
+<td><input type="email" name = "mail"></td>
+</tr><tr>
+<td><label> Phone number </label></td>
+<td><input type="number" name="number"></td>
+</tr><tr>
+<td><label> Customer ID </label></td>
+<td><input type="text" name="10"></td>
+</tr>
+<tr>
+<td><label> Date of Birth </label></td>
+<td><input type="date" name="dob"></td>
+</tr><tr>
+<td><label> Preferred contact time </label></td>
+<td><input type = "time" name="time"></td>
+</tr>
+<tr>
+<td><label> Address </label></td>
+<td>
+<textarea name = "add" rows = "5" cols="20">
+</textarea>
+</td>
+</tr>
+<tr>
+<td><label> Gender </label></td>
+<td>
+<input type="radio" name="g" value="m"> Male
+<input type="radio" name = "g" value="f"> Female
+<input type = "radio" name = "g" value="0"> other
+</td>
+</tr><tr>
+<td>Service Intrested</td>
+<td>
+<input type="checkbox" name="int">Internet
+<input type="checkbox" name="mob">Mobile
+<input type="checkbox" name="dth">DTH
+</td>
+</tr><tr>
+<td>Account Type</td>
+<td>
+<select name="acc">
+<option value="x">Savings</option>
+<option value="y">Current</option>
+<option value="o">Other</option>
+</select>
+</td>
+</tr><tr>
+<td>Favourite Color</td>
+<td><input type="color" name="col"></td>
+</tr><tr>
+<td>Satisfaction Level</td>
+<td><input type="range" name="Sl" min="0" max="10"></td>
+</tr><tr>
+<td>Upload Photo</td>
+<td><input type="file" name="file"></td>
+</tr><tr>
+<td>Website</td>
+<td><input type="url" name="url"></td>
+</tr>
+<tr>
+<td>Search Product</td>
+<td><input type="text" name="sp"></td>
+</tr><tr>
+<td></td>
+<td>
+<button type="submit">Register</button>
+<button type="reset">Clear</button>
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
