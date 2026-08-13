@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matrix Addition</title>
+</head>
+<body>
+    <font size="5" color="purple" font-family="papyrus">MATRIX ADDITION</font>
+
+<script>
+let r = parseInt(prompt("Enter number of rows:"));
+let c = parseInt(prompt("Enter number of columns:"));
+let a = [], b = [], sum = [];
+for (let i = 0; i < r; i++) {
+    a[i] = [];
+    for (let j = 0; j < c; j++) {
+        a[i][j] = parseInt(prompt(`Enter element a[${i}][${j}]:`));
+    }
+}
+for (let i = 0; i < r; i++) {
+    b[i] = [];
+    for (let j = 0; j < c; j++) {
+        b[i][j] = parseInt(prompt(`Enter element b[${i}][${j}]:`));
+    }
+}
+for (let i = 0; i < r; i++) {
+    sum[i] = [];
+    for (let j = 0; j < c; j++) {
+        sum[i][j] = a[i][j] + b[i][j];
+    }
+}
+document.write("<h3>Result Matrix:</h3>");
+for (let i = 0; i < r; i++) {
+    for (let j = 0; j < c; j++) {
+        document.write(sum[i][j] + " ");
+    }
+    document.write("<br>");
+}
+</script>
+
+</body>
+</html>
