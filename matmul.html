@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matrix Multiplication</title>
+</head>
+<body>
+
+<h2>Matrix Multiplication</h2>
+
+<p id="res"></p>
+
+<script>
+let r1 = parseInt(prompt("Enter rows of Matrix 1:"));
+let c1 = parseInt(prompt("Enter columns of Matrix 1:"));
+let r2 = parseInt(prompt("Enter rows of Matrix 2:"));
+let c2 = parseInt(prompt("Enter columns of Matrix 2:"));
+
+let a = [], b = [], mul = [];
+
+if (c1 != r2) {
+    document.getElementById("res").innerHTML = "Multiplication not possible!";
+} else {
+
+    // Matrix 1 input
+    for (let i = 0; i < r1; i++) {
+        a[i] = [];
+        for (let j = 0; j < c1; j++) {
+            a[i][j] = parseInt(prompt(`Enter a[${i}][${j}]:`));
+        }
+    }
+
+    // Matrix 2 input
+    for (let i = 0; i < r2; i++) {
+        b[i] = [];
+        for (let j = 0; j < c2; j++) {
+            b[i][j] = parseInt(prompt(`Enter b[${i}][${j}]:`));
+        }
+    }
+
+    // Multiplication
+    for (let i = 0; i < r1; i++) {
+        mul[i] = [];
+        for (let j = 0; j < c2; j++) {
+            mul[i][j] = 0;
+            for (let k = 0; k < c1; k++) {
+                mul[i][j] += a[i][k] * b[k][j];
+            }
+        }
+    }
+
+    // Output
+    let out = "Result Matrix:<br>";
+    for (let i = 0; i < r1; i++) {
+        for (let j = 0; j < c2; j++) {
+            out += mul[i][j] + " ";
+        }
+        out += "<br>";
+    }
+
+    document.getElementById("res").innerHTML = out;
+}
+</script>
+
+</body>
+</html>
