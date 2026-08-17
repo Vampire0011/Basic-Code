@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student List</title>
+</head>
+<body>
+
+<h2>Student List</h2>
+
+<table border="1" id="tbl">
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Department</th>
+<th>Email</th>
+</tr>
+</table>
+
+<script>
+fetch("students.xml")
+.then(res => res.text())
+.then(data => {
+    let parser = new DOMParser();
+    let xml = parser.parseFromString(data, "text/xml");
+    let students = xml.getElementsByTagName("student");
+
+    let table = document.getElementById("tbl");
+
+    for(let i = 0; i < students.length; i++) {
+        let row = table.insertRow();
+
+        row.insertCell(0).innerText = students[i].getElementsByTagName("id")[0].textContent;
+        row.insertCell(1).innerText = students[i].getElementsByTagName("name")[0].textContent;
+        row.insertCell(2).innerText = students[i].getElementsByTagName("department")[0].textContent;
+        row.insertCell(3).innerText = students[i].getElementsByTagName("email")[0].textContent;
+    }
+});
+</script>
+
+</body>
+</html>
